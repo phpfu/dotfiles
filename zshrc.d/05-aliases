@@ -1,0 +1,13 @@
+# Tmux
+alias td='tmux detach'
+alias tls='tmux ls'
+
+# Vagrant
+alias vh="vagrant halt"
+alias vs="vagrant suspend"
+alias vr="vagrant resume"
+alias vu="vagrant up"
+alias vd="vagrant destroy"
+alias vsh="vagrant ssh"
+alias vst="vagrant status"
+alias vls="vagrant global-status"

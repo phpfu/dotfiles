@@ -1,0 +1,60 @@
+#
+# OSX
+#
+
+# Folder view configuration files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnail cache files
+._*
+Thumbs.db
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+#
+# Linux
+#
+
+*~
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+#
+# Miscellaneous
+#
+
+.env
+
+# Google App Engine generated folder
+appengine-generated/
+
+# IDEs
+.idea/
+
+# pre-commit
+.pre-commit-config.yaml
+
+# Redis
+*.rdb
+
+# Vagrant
+.vagrant/
