@@ -2,12 +2,12 @@
 
 ## Requirements
 
-* [pip]()
-* [rbenv]()
-* [rcm]()
-* [tmux]()
-* [zgen]()
-* [zsh]()
+* [pip](https://pip.pypa.io/en/stable/installing/)
+* [rbenv](https://github.com/sstephenson/rbenv#homebrew-on-mac-os-x)
+* [rcm](https://github.com/thoughtbot/rcm#installation)
+* [tmux](https://tmux.github.io/)
+* [zgen](https://github.com/tarjoilija/zgen)
+* [zsh](http://www.zsh.org/)
 
 On Ubuntu:
 
@@ -51,6 +51,9 @@ You can safely run rcup multiple times to update:
 ```
 rcup
 ```
+
+You will also want to install a [patched font](https://github.com/arialdomartini/oh-my-git#the-font)
+if you choose to use the default theme provided.
 
 ## Customizations
 

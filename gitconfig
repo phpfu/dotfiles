@@ -1,7 +1,3 @@
-[user]
-	name = Jad Bitar
-	email = jadbitar@mac.com
-
 [alias]
 
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
@@ -88,36 +84,22 @@
 		fi \
 	}; f"
 
+	# via http://blog.apiaxle.com/post/handy-git-tips-to-stop-you-getting-fired/
+	snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
+	snapshots = !git stash list --grep snapshot
+
+	#via http://stackoverflow.com/questions/5188320/how-can-i-get-a-list-of-git-branches-ordered-by-most-recent-commit
+	recent-branches = !git for-each-ref --count=15 --sort=-committerdate refs/heads/ --format='%(refname:short)'
+
 [apply]
 
 	# Detect whitespace errors when applying a patch
 	whitespace = fix
 
-[core]
+[branch]
 
-	# Use custom `.gitignore` and `.gitattributes`
-	excludesfile = ~/.gitignore
-	attributesfile = ~/.gitattributes
-
-	# Treat spaces before tabs and all kinds of trailing whitespace as an error
-	# [default] trailing-space: looks for spaces at the end of a line
-	# [default] space-before-tab: looks for spaces before tabs at the beginning of a line
-	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
-
-	# Make `git rebase` safer on OS X
-	# More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
-	trustctime = false
-
-	# Prevent showing files whose names contain non-ASCII symbols as unversioned.
-	# http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
-	precomposeunicode = false
-	autocrlf = false
-
-[color]
-
-	# Use colors in Git commands that are capable of colored output when
-	# outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
-	ui = auto
+	# When branching, set pulls to rebase rather than merge
+	autoSetupRebase = always
 
 [color "branch"]
 
@@ -138,10 +120,46 @@
 	changed = green
 	untracked = cyan
 
+[core]
+
+	attributesfile = ~/.gitattributes
+
+	autocrlf = false
+
+	# Use custom `.gitignore` and `.gitattributes`
+	excludesfile = ~/.gitignore
+
+	# possibly deprecated, use GIT_MERGE_AUTOEDIT instead
+	mergeoptions = --no-edit
+
+	# Prevent showing files whose names contain non-ASCII symbols as unversioned.
+	# http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
+	precomposeunicode = false
+
+	# Make `git rebase` safer on OS X
+	# More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
+	trustctime = false
+
+	# Treat spaces before tabs and all kinds of trailing whitespace as an error
+	# [default] space-before-tab: looks for spaces before tabs at the beginning of a line
+	# [default] -indent-with-non-tab: disabled by default, treats spaces instead of tabs as error
+	# [default] trailing-space: looks for spaces at the end of a line or end of file
+	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
+
 [diff]
+
+	# Extends patience algorithm used in jgit and therefore eclipse
+	algorithm = histogram
+
+	# Git diff will use (i)ndex, (w)ork tree, (c)ommit and (o)bject instead of a/b/c/d as prefixes for patches
+	mnemonicprefix = true
 
 	# Detect copies as well as renames
 	renames = copies
+
+[format]
+
+	pretty = format:%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset
 
 [help]
 
@@ -153,10 +171,30 @@
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
 
+	# Only show conflicts when merging
+	verbosity = 1
+
+	# Do merge commits by default (e.g. --no-ff)
+	ff = false
+
 [push]
 
 	# Push only current branch to tracking remote
 	default = current
+
+[rerere]
+
+	# Remember my merges
+	# http://gitfu.wordpress.com/2008/04/20/git-rerere-rereremember-what-you-did-last-time/
+	enabled = true
+
+[status]
+
+	# Show branch and tracking info while in short
+	branch = true
+
+	# More compact status display
+	short = true
 
 # URL shorthands
 

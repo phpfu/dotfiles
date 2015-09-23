@@ -8,7 +8,7 @@ export LANG=en_US.UTF-8
 export EDITOR='vim'
 
 # Set bin
-export PATH="$HOME/.bin:$PATH"
+export PATH="${HOME}/.bin:${PATH}"
 
 # Load zgen
 source "${HOME}/.zgen/zgen.zsh"
@@ -16,6 +16,8 @@ source "${HOME}/.zgen/zgen.zsh"
 # Check if there's no init script
 if ! zgen saved; then
     echo "Creating a zgen save"
+
+    zgen load unixorn/autoupdate-zgen
 
     zgen oh-my-zsh
 
@@ -108,31 +110,8 @@ zle-line-init() {
 }
 zle -N zle-line-init
 
-# Icons for the oh-my-git prompt using custom patched font
-#                            
-#                            
-#                            
-omg_is_a_git_repo_symbol=''
-omg_has_untracked_files_symbol=''
-omg_has_adds_symbol=''
-omg_has_deletions_symbol=''
-omg_has_cached_deletions_symbol=''
-omg_has_modifications_symbol=''
-omg_has_cached_modifications_symbol=''
-omg_ready_to_commit_symbol=''
-omg_is_on_a_tag_symbol=''
-omg_needs_to_merge_symbol=''
-omg_detached_symbol=''
-omg_can_fast_forward_symbol=''
-omg_has_diverged_symbol=''
-omg_not_tracked_branch_symbol=''
-omg_rebase_tracking_branch_symbol=''
-omg_merge_tracking_branch_symbol=''
-omg_should_push_symbol=''
-omg_has_stashes_symbol=''
-omg_has_action_in_progress_symbol=''
 # Alter theme's prompt when not in a git repo
-omg_ungit_prompt='%~\n> ' 
+omg_ungit_prompt='%~\n> '
 
 # History settings
 setopt hist_ignore_all_dups inc_append_history
@@ -151,13 +130,13 @@ bindkey "^N" insert-last-word
 bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
 
 # Load supplementary aliases/functions/scripts
-for config in "$HOME"/.zshrc.d/* ; do
+for config in "${HOME}"/.zshrc.d/* ; do
     source "$config"
 done
 
 # Load custom aliases/functions/scripts
 if [ -d "$HOME"/.dotfiles.local/zshrc.d ]; then
-    for config in "$HOME"/.dotfiles.local/zshrc.d/* ; do
+    for config in "${HOME}"/.dotfiles.local/zshrc.d/* ; do
         source "$config"
     done
 fi

@@ -1,7 +1,13 @@
-log
-tags
-tmp
-vendor
 .git/
 bower_components/
+log/
 node_modules/
+tags
+tmp/
+vendor/
+*.min.*
+*.htc
+*.pdf
+*.map
+reset.css
+jquery.js
