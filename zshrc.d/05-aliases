@@ -1,3 +1,29 @@
+# Config editing
+alias ae='vim ~/.zaliases && source ~/.zaliases'
+alias ze='vim ~/.zshrc && zgen reset && zsh'
+
+# General
+alias clear='clear; echo "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"'
+alias ll='k'
+
+# Git
+alias ga='git add'
+alias gap='git add -p'
+alias gca='git commit --amend'
+alias gcan='git commit --amend --no-edit'
+alias gco='git checkout'
+alias gcop='git checkout -p'
+alias gdc='git diff --cached'
+alias gdch='git diff --cached HEAD~'
+alias gl='tig'
+alias gr='git reset'
+alias grp='git reset -p'
+alias gs='git status'
+
+# PHP
+alias hcomposer='hhvm -d allow_url_fopen=On -d detect_unicode=Off $(brew --prefix)/bin/composer.phar'
+alias p='vendor/bin/phpunit --columns max --disallow-todo-tests --stop-on-failure'
+
 # Tmux
 alias td='tmux detach'
 alias tls='tmux ls'

@@ -27,6 +27,16 @@ Temporary Items
 .apdisk
 
 #
+# Windows
+#
+
+# Windows image file caches
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+
+#
 # Linux
 #
 
@@ -39,6 +49,35 @@ Temporary Items
 .Trash-*
 
 #
+# Tags
+#
+
+# Ignore tags created by etags, ctags, gtags (GNU global) and cscope
+TAGS
+!TAGS/
+tags
+!tags/
+gtags.files
+GTAGS
+GRTAGS
+GPATH
+cscope.files
+cscope.out
+cscope.in.out
+cscope.po.out
+.tags*
+
+#
+# Vim
+#
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+#
 # Miscellaneous
 #
 
@@ -49,12 +88,16 @@ appengine-generated/
 
 # IDEs
 .idea/
+*.sublime-*
 
 # pre-commit
 .pre-commit-config.yaml
 
 # Redis
 *.rdb
+
+# SASS
+.sass-cache
 
 # Vagrant
 .vagrant/
