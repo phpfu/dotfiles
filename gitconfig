@@ -122,11 +122,12 @@
 
 [core]
 
+	# Use custom `.gitattributes`
 	attributesfile = ~/.gitattributes
 
 	autocrlf = false
 
-	# Use custom `.gitignore` and `.gitattributes`
+	# Use custom `.gitignore`
 	excludesfile = ~/.gitignore
 
 	# possibly deprecated, use GIT_MERGE_AUTOEDIT instead
