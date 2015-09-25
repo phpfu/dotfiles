@@ -67,7 +67,6 @@ if ! zgen saved; then
     zgen load horosgrisa/autoenv
     zgen load horosgrisa/mysql-colorize
     zgen load skx/sysadmin-util
-    zgen load rimraf/k
     zgen load voronkovich/mysql.plugin.zsh
     zgen load willghatch/zsh-snippets
     zgen load zsh-users/zsh-syntax-highlighting
