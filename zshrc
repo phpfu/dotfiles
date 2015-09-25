@@ -79,7 +79,7 @@ if ! zgen saved; then
         zgen oh-my-zsh plugins/gem
         zgen oh-my-zsh plugins/osx
     elif [[ $CURRENT_OS == 'Linux' ]]; then
-
+        zgen oh-my-zsh plugins/debian
         if [[ $DISTRO == 'CentOS' ]]; then
             zgen oh-my-zsh plugins/centos
         fi
