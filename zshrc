@@ -133,10 +133,16 @@ bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
 for config in "${HOME}"/.zshrc.d/* ; do
     source "$config"
 done
+for config in "$HOME"/.zshrc.d/**/* ; do
+    source "$config"
+done
 
 # Load custom aliases/functions/scripts
 if [ -d "$HOME"/.dotfiles.local/zshrc.d ]; then
     for config in "${HOME}"/.dotfiles.local/zshrc.d/* ; do
+        source "$config"
+    done
+    for config in "$HOME"/.dotfiles.local/zshrc.d/**/* ; do
         source "$config"
     done
 fi
