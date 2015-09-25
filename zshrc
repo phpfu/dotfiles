@@ -13,6 +13,30 @@ export PATH="${HOME}/.bin:${PATH}"
 # Load zgen
 source "${HOME}/.zgen/zgen.zsh"
 
+#
+# OS Detection
+#
+
+UNAME=`uname`
+
+# Fallback info
+CURRENT_OS='Linux'
+DISTRO=''
+
+if [[ $UNAME == 'Darwin' ]]; then
+    CURRENT_OS='OS X'
+else
+    # Must be Linux, determine distro
+    if [[ -f /etc/redhat-release ]]; then
+        # CentOS or Redhat?
+        if grep -q "CentOS" /etc/redhat-release; then
+            DISTRO='CentOS'
+        else
+            DISTRO='RHEL'
+        fi
+    fi
+fi
+
 # Check if there's no init script
 if ! zgen saved; then
     echo "Creating a zgen save"
@@ -78,7 +102,7 @@ if ! zgen saved; then
         zgen oh-my-zsh plugins/gem
         zgen oh-my-zsh plugins/osx
     elif [[ $CURRENT_OS == 'Linux' ]]; then
-
+        zgen oh-my-zsh plugins/debian
         if [[ $DISTRO == 'CentOS' ]]; then
             zgen oh-my-zsh plugins/centos
         fi
@@ -132,10 +156,16 @@ bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
 for config in "${HOME}"/.zshrc.d/* ; do
     source "$config"
 done
+for config in "$HOME"/.zshrc.d/**/* ; do
+    source "$config"
+done
 
 # Load custom aliases/functions/scripts
 if [ -d "$HOME"/.dotfiles.local/zshrc.d ]; then
     for config in "${HOME}"/.dotfiles.local/zshrc.d/* ; do
+        source "$config"
+    done
+    for config in "$HOME"/.dotfiles.local/zshrc.d/**/* ; do
         source "$config"
     done
 fi
