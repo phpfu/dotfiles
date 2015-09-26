@@ -1,6 +1,8 @@
 # Credit: https://github.com/thoughtbot/dotfiles
 # No arguments: `git status`
 # With arguments: acts like `git`
+unalias g
+
 g() {
   if [[ $# > 0 ]]; then
     git $@
