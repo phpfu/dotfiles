@@ -100,6 +100,25 @@ alias todo='$EDITOR ~/.todo'
 
 and your functions could be included in `~/.dotfiles.local/zshrc.d/functions`.
 
+## Gotchas
+
+### Copy/pasting with tmux
+
+If you run into problems sharing the tmux clipboard, install the following:
+
+- [reattach-to-user-namespace](https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard)<br/>
+  Install with brew `$ brew install reattach-to-user-namespace` or
+  macports `$ sudo port install tmux-pasteboard`.
+
+  *Note*: Beginning with OSX Yosemite (10.10), `pbcopy` is reported to work
+  correctly with `tmux`, so we believe `reattach-to-user-namespace` is not
+  needed anymore. Please install it in case the plugin doesn't work for you.
+
+- `xclip` OR `xsel` command<br/>
+  You most likely already have one of them, but if not:
+  - Debian / Ubuntu: `$ sudo apt-get install xclip` or `$ sudo apt-get install xsel`
+  - Red hat / CentOS: `$ yum install xclip` or `$ yum install xsel`
+
 ## Credits
 
 I've read a lot and copy/pasted a ton but can't remember every source. The 2 main ones though are:
