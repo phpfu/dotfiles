@@ -32,7 +32,7 @@ then
   printf '%s\n' '/_/         /_/                        '
 
   printf "${BLUE}%s\n" "Eayah! phpfu/dotfiles has been updated and/or is at the current version."
-  printf "${BLUE}${BOLD}%s${NORMAL}\n" "To keep up on the latest news and updates, follow us on GitHub: https://github.com/phpfu"
+  printf "${BLUE}${BOLD}%s${NORMAL}\n" "To keep up on the latest news and updates, follow us on Twitter: https://twitter.com/phpfu"
 else
   printf "${RED}%s${NORMAL}\n" 'There was an error updating. Try again later?'
 fi
