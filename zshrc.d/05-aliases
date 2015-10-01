@@ -1,5 +1,7 @@
-# Config editing
-alias ae='vim ~/.zaliases && source ~/.zaliases'
+# Terminal
+alias q='exit'
+alias e='$EDITOR'
+alias ae='vim ~/.zshrc.d/05-aliases && source ~/.zshrc.d/05-aliases'
 alias ze='vim ~/.zshrc && zgen reset && zsh'
 
 # Git
