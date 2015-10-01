@@ -45,6 +45,10 @@ else
     fi
 fi
 
+# Theme info (used by zgen below and vim later)
+export BASE16_THEME_NAME="ocean"
+export BASE16_THEME_SHADE="dark"
+
 # Check if there's no init script
 if ! zgen saved; then
     echo "Creating a zgen save"
@@ -125,6 +129,9 @@ if ! zgen saved; then
     # Prompt: pure
     zgen load mafredri/zsh-async
     zgen load sindresorhus/pure
+
+    # Theme: base16
+    zgen load chriskempson/base16-shell base16-${BASE16_THEME_NAME}.${BASE16_THEME_SHADE}.sh
 
     # save all to init script
     zgen save
