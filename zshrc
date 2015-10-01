@@ -94,7 +94,6 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/zsh_reload
 
     zgen load ascii-soup/zsh-url-highlighter
-    zgen load b4b4r07/enhancd
     zgen load djui/alias-tips
     zgen load horosgrisa/autoenv
     zgen load horosgrisa/mysql-colorize
