@@ -16,6 +16,9 @@ export EDITOR='vim'
 export PATH="${HOME}/.bin:${PATH}"
 
 # Load zgen
+if [[ ! -d "${HOME}/.zgen" ]]; then
+    git clone http://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
+fi
 source "${HOME}/.zgen/zgen.zsh"
 
 #

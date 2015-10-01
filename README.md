@@ -15,7 +15,6 @@ On Ubuntu:
 sudo add-apt-repository ppa:martin-frost/thoughtbot-rcm
 sudo apt-get update
 sudo apt-get -y install python-pip rbenv rcm tmux zsh
-git clone http://github.com/tarjoilija/zgen.git $HOME/.zgen
 sudo chsh -s $(which zsh) $USER
 git clone http://github.com/phpfu/dotfiles $HOME/.dotfiles
 ```
@@ -26,7 +25,6 @@ On MacOS:
 sudo easy_install pip // or `brew install python`
 brew tap thoughtbot/formulae
 brew install rcm tmux rbenv
-git clone http://github.com/tarjoilija/zgen.git $HOME/.zgen
 chsh -s $(which zsh)
 git clone http://github.com/phpfu/dotfiles $HOME/.dotfiles
 ```
