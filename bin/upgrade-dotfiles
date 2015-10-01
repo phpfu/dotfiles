@@ -23,16 +23,15 @@ printf "${BLUE}%s${NORMAL}\n" "Upgrading phpfu/dotfiles"
 cd "$DOTFILES"
 if git pull --rebase --stat origin master
 then
-  printf '%s' "$GREEN"
-  printf '%s\n' '           __                ____      '
-  printf '%s\n' '    ____  / /_  ____        / __/_  __ '
-  printf '%s\n' '   / __ \/ __ \/ __ \______/ /_/ / / / '
-  printf '%s\n' '  / /_/ / / / / /_/ /_____/ __/ /_/ /  '
-  printf '%s\n' ' / .___/_/ /_/ .___/     /_/  \__,_/   '
-  printf '%s\n' '/_/         /_/                        '
+  printf '%s\n' "${BLUE}"'           __        '"${RED}"'        ____      '
+  printf '%s\n' "${BLUE}"'    ____  / /_  ____ '"${RED}"'       / __/_  __ '
+  printf '%s\n' "${BLUE}"'   / __ \/ __ \/ __ \'"${RED}"'______/ /_/ / / / '
+  printf '%s\n' "${BLUE}"'  / /_/ / / / / /_/ /'"${RED}"'_____/ __/ /_/ /  '
+  printf '%s\n' "${BLUE}"' / .___/_/ /_/ .___/ '"${RED}"'    /_/  \__,_/   '
+  printf '%s\n' "${BLUE}"'/_/         /_/      '"${RED}"'                  '
 
-  printf "${BLUE}%s\n" "Eayah! phpfu/dotfiles has been updated and/or is at the current version."
-  printf "${BLUE}${BOLD}%s${NORMAL}\n" "To keep up on the latest news and updates, follow us on Twitter: https://twitter.com/phpfu"
+  printf "${GREEN}%s\n" "Eayah! phpfu/dotfiles has been updated and/or is at the current version."
+  printf "${YELLOW}${BOLD}%s${NORMAL}\n" "To keep up on the latest news and updates, follow us on Twitter: ${BLUE}https://twitter.com/phpfu"
 else
   printf "${RED}%s${NORMAL}\n" 'There was an error updating. Try again later?'
 fi
