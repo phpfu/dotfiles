@@ -122,14 +122,9 @@ if ! zgen saved; then
     zgen load zsh-users/zsh-completions src
     zgen load tarruda/zsh-autosuggestions
 
-    # Theme
-    if [ "$SSH_CONNECTION" ]; then
-        zgen load mafredri/zsh-async
-        zgen load sindresorhus/pure
-    else
-        zgen load arialdomartini/oh-my-git
-        zgen load arialdomartini/oh-my-git-themes oppa-lana-style
-    fi
+    # Prompt: pure
+    zgen load mafredri/zsh-async
+    zgen load sindresorhus/pure
 
     # save all to init script
     zgen save
@@ -140,9 +135,6 @@ zle-line-init() {
     zle autosuggest-start
 }
 zle -N zle-line-init
-
-# Alter theme's prompt when not in a git repo
-omg_ungit_prompt='%~\n> '
 
 # History settings
 setopt hist_ignore_all_dups inc_append_history
