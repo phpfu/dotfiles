@@ -1,0 +1,6 @@
+# Vagrant-specific settings
+
+# Jump to mounted working directory rather than $HOME
+if [[ $(pwd) == "/home/vagrant" ]]; then
+  cd /vagrant
+fi
