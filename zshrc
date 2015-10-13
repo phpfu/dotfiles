@@ -79,7 +79,7 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/virtualenv
 
     # Miscellaneous
-    zgen oh-my-zsh plugins/colored-man
+    zgen oh-my-zsh plugins/colored-man-pages
     zgen oh-my-zsh plugins/colorize
     zgen oh-my-zsh plugins/command-not-found
     zgen oh-my-zsh plugins/common-aliases
