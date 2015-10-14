@@ -1,6 +1,6 @@
 # Vagrant-specific settings
 
 # Jump to mounted working directory rather than $HOME
-if [[ $(pwd) == "/home/vagrant" ]]; then
+if [[ $(pwd) == "/home/vagrant" && -f /proc/mounts && $(grep -cim1 "/vagrant vboxsf" /proc/mounts) -eq 1 ]]; then
   cd /vagrant
 fi
