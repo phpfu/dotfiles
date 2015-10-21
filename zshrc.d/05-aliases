@@ -7,7 +7,7 @@ alias ae='vim ~/.zshrc.d/05-aliases && source ~/.zshrc.d/05-aliases'
 alias ze='vim ~/.zshrc && zgen reset && zsh'
 
 # Debian/Ubuntu
-unalias ag # remove apt-get alias in favor silversearcher-ag
+unalias ag 2>/dev/null # remove apt-get alias in favor silversearcher-ag
 
 # Git
 alias ga='git add'
