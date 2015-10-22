@@ -4,7 +4,8 @@ alias e='$EDITOR'
 
 # Config editing
 alias ae='vim ~/.zshrc.d/05-aliases && source ~/.zshrc.d/05-aliases'
-alias ze='vim ~/.zshrc && zgen reset && zsh'
+alias ze='vim ~/.zshrc && zgen reset && exec zsh'
+alias zr='exec zsh'
 
 # Debian/Ubuntu
 unalias ag # remove apt-get alias in favor silversearcher-ag
