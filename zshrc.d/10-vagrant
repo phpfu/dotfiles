@@ -1,0 +1,4 @@
+# Vagrant-specific settings
+
+# Jump to mounted working directory rather than $HOME
+[[ $PWD == "/home/vagrant" ]] && test -f /proc/mounts && grep -q "/vagrant vboxsf" /proc/mounts && cd /vagrant
