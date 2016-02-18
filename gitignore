@@ -89,6 +89,7 @@ appengine-generated/
 # IDEs
 .idea/
 *.sublime-*
+.phpintel/
 
 # pre-commit
 .pre-commit-config.yaml
