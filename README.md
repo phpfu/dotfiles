@@ -5,6 +5,7 @@
 * [pip](https://pip.pypa.io/en/stable/installing/)
 * [rbenv](https://github.com/sstephenson/rbenv#homebrew-on-mac-os-x)
 * [rcm](https://github.com/thoughtbot/rcm#installation)
+* [tig](https://github.com/jonas/tig)
 * [tmux](https://tmux.github.io/)
 * [zgen](https://github.com/tarjoilija/zgen)
 * [zsh](http://www.zsh.org/)
