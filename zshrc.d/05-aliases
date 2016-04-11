@@ -22,7 +22,7 @@ alias gdch='git diff --cached HEAD~'
 alias gl='tig'
 alias gr='git reset'
 alias grp='git reset -p'
-alias gs='git status'
+alias gs='git standup'
 
 # PHP
 alias hcomposer='hhvm -d allow_url_fopen=On -d detect_unicode=Off $(brew --prefix)/bin/composer.phar'
