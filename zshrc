@@ -149,6 +149,7 @@ SAVEHIST=4096
 bindkey "^A" beginning-of-line
 bindkey "^E" end-of-line
 bindkey "^K" kill-line
+bindkey "^J" push-line-or-edit
 bindkey "^R" history-incremental-search-backward
 bindkey "^P" history-search-backward
 bindkey "^Y" accept-and-hold
