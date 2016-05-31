@@ -199,6 +199,26 @@
 
 # URL shorthands
 
+[url "git@bitbucket.org:"]
+
+	insteadOf = "bb:"
+	pushInsteadOf = "bitbucket:"
+	pushInsteadOf = "git://bitbucket.org/"
+
+[url "git://bitbucket.org/"]
+
+	insteadOf = "bitbucket:"
+
+[url "git@gitlab.com:"]
+
+	insteadOf = "gl:"
+	pushInsteadOf = "gitlab:"
+	pushInsteadOf = "git://gitlab.com/"
+
+[url "git://gitlab.com/"]
+
+	insteadOf = "gitlab:"
+
 [url "git@github.com:"]
 
 	insteadOf = "gh:"
