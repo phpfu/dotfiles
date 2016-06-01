@@ -1,0 +1,11 @@
+light() {
+    echo "Switching to light background for ZSH and Vim"
+    export BASE16_THEME_SHADE="light"
+    source ~/.zgen/chriskempson/base16-shell-master/base16-${BASE16_THEME_NAME}.${BASE16_THEME_SHADE}.sh
+}
+
+dark() {
+    echo "Switching to dark background for ZSH and Vim"
+    export BASE16_THEME_SHADE="dark"
+    source ~/.zgen/chriskempson/base16-shell-master/base16-${BASE16_THEME_NAME}.${BASE16_THEME_SHADE}.sh
+}

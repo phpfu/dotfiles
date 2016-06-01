@@ -46,8 +46,8 @@ else
 fi
 
 # Theme info (used by zgen below and vim later)
-export BASE16_THEME_NAME="ocean"
-export BASE16_THEME_SHADE="dark"
+export BASE16_THEME_NAME="${BASE16_THEME_NAME:=ocean}"
+export BASE16_THEME_SHADE="${BASE16_THEME_SHADE:=dark}"
 
 # Check if there's no init script
 if ! zgen saved; then
