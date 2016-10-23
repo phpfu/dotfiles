@@ -102,3 +102,6 @@ appengine-generated/
 
 # Vagrant
 .vagrant/
+
+# MySQL Workbench
+*.mwb.bak
