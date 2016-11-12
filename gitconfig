@@ -196,6 +196,12 @@
 
 	# More compact status display
 	short = true
+# LFS
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
 
 # URL shorthands
 
