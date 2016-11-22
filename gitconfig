@@ -91,6 +91,10 @@
 	#via http://stackoverflow.com/questions/5188320/how-can-i-get-a-list-of-git-branches-ordered-by-most-recent-commit
 	recent-branches = !git for-each-ref --count=15 --sort=-committerdate refs/heads/ --format='%(refname:short)'
 
+	# via http://gitready.com/advanced/2011/10/21/ribbon-and-catchup-reading-new-commits.html
+	ribbon = tag --force _ribbon origin/master
+	catchup = log --patch --reverse --topo-order _ribbon..origin/master
+
 [apply]
 
 	# Detect whitespace errors when applying a patch
